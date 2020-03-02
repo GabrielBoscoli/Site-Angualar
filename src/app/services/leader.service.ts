@@ -10,7 +10,9 @@ export class LeaderService {
   constructor() { }
 
   getLeader(): Promise<Leader[]> {
-    return Promise.resolve(LEADERS);
+    return new Promise(resolve => {
+      setTimeout(() => resolve(LEADERS), 2000);
+    });
   }
 
   /*getDish(id: string): Dish {
@@ -18,6 +20,7 @@ export class LeaderService {
   }*/
 
   getFeaturedLeader(): Promise<Leader> {
-    return Promise.resolve(LEADERS.filter((leader) => leader.featured)[0]);
-  }
+    return new Promise(resolve => {
+      setTimeout(() => resolve(LEADERS.filter((leader) => leader.featured)[0]), 2000);
+  });
 }
