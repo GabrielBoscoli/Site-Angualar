@@ -72,7 +72,7 @@ import { MatDialogModule } from '@angular/material/dialog';
   ],
   entryComponents: [ //componentes que podem sobrepor uma view:
     LoginComponent
-  ]
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
