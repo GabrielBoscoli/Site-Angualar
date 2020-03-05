@@ -15,6 +15,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSliderModule } from '@angular/material/slider';
 
 import { AppComponent } from './app.component';
 
@@ -53,6 +54,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatToolbarModule,
     AppRoutingModule,
     FlexLayoutModule,
+    MatSliderModule,
     MatListModule,
     MatFormFieldModule,
     MatProgressSpinnerModule,
