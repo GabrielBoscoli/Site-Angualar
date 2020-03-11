@@ -24,6 +24,8 @@ export class ContactComponent implements OnInit {
   contactType = ContactType;
   @ViewChild('fform') feedbackFormDirective;
   errMess: string;
+  serverProcessing: boolean;
+  showingSubmission: boolean;
 
   formErrors = {
     'firstname': '',
@@ -78,10 +80,12 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log("onSubmit()");
     this.feedback = this.feedbackForm.value;
-    console.log(this.feedback);
-    this.feedbackService.submitFeedback(this.feedback).subscribe(feedback => this.feedback = feedback, errmess => this.errMess = errmess);
-    console.log(this.feedback.message);
+    this.serverProcessing = true;
+    this.feedbackService.submitFeedback(this.feedback).subscribe(feedback => { this.feedback = feedback; this.showingSubmission = true;
+      setTimeout(() => this.showingSubmission = false, 5000) }, errmess => this.errMess = errmess, () => this.serverProcessing = false);
+    this.feedbackFormDirective.resetForm();
     this.feedbackForm.reset({
       firstname: '',
       lastname: '',
@@ -91,7 +95,6 @@ export class ContactComponent implements OnInit {
       contacttype: 'None',
       message: ''
     });
-    this.feedbackFormDirective.resetForm();
   }
 
   onValueChanged(data?: any) {
