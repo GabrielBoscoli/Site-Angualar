@@ -24,6 +24,7 @@ import { visibility, flyInOut } from '../animations/app.animation';
 export class DishdetailComponent implements OnInit {
 
   dish: Dish;
+  Arr = Array;
   
   dishIds: string[];
   prev: string;

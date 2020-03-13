@@ -31,7 +31,8 @@ export class ContactComponent implements OnInit {
     'firstname': '',
     'lastname': '',
     'telnum': '',
-    'email': ''
+    'email': '',
+    'message': ''
   };
 
   validationMessages = {
@@ -53,6 +54,10 @@ export class ContactComponent implements OnInit {
       'required':      'Email is required.',
       'email':         'Email not in valid format.'
     },
+    'message': {
+      'required':      'Conta pra nos carai queremo saber escreve ai',
+      'minlength':     'O Violante merece mais que isso...'
+    }
   };
 
   constructor(private fb: FormBuilder,
@@ -70,8 +75,8 @@ export class ContactComponent implements OnInit {
       telnum: ['', [Validators.required, Validators.pattern] ],
       email: ['', [Validators.required, Validators.email] ],
       agree: false,
-      contacttype: 'None',
-      message: ''
+      contacttype: '',
+      message: ['', [Validators.required, Validators.minLength(10)]]
     });
 
     this.feedbackForm.valueChanges.subscribe(data => this.onValueChanged(data));
@@ -92,7 +97,7 @@ export class ContactComponent implements OnInit {
       telnum: '',
       email: '',
       agree: false,
-      contacttype: 'None',
+      contacttype: '',
       message: ''
     });
   }

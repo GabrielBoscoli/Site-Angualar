@@ -4,7 +4,7 @@
 
   <div fxFlex>
     <div>
-        <h3>About Us</h3>
+        <h3>Sobre Ele</h3>
         <hr>
     </div>
   </div>
@@ -12,27 +12,34 @@
   <div fxFlex>
     <div fxLayout="column" fxLayout.gt-sm="row">
       <div fxFlex="70">
-        <h2>Our History</h2>
-        <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
-        <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
+        <h2>História</h2>
+        <p>Nascido em 1998, já era visível que Pedro era um ser humano diferenciado desde sua infância. Com apenas <em>2 dias</em> de vida, já falava mais de 4 línguas, incluindo úmbrio, que está morta. Quando completou <em>4 anos</em>, decidiu sair de sua cidade natal, Rio de Janeiro, onde vive atualmente, para levar comida e conhecimento aos mais necessitados. Foi nessa época que a fome mundial foi solucionada e a paz instaurada.</p>
+        <p>Como forma de agradecimento, a ONU nomeou Violante o presidente da Terra com poder para fazer o que quiser, honraria essa que foi negada pelo nosso herói, justificando que, agora com os problemas do mundo resolvidos, queria apenas viver uma vida pacata com os amigos.</p>
+        <p>Hoje, com 21 anos, ele está longe dos holofotes, mas suas ações foram um marco enorme para a história. Sem ele, estariamos perdidos. Algumas pessoas o consideram o Deus da Era da Informação por conta de seu intelecto altamente superior, seu carisma exorbitante e atitudes irretocáveis.</p>
       </div>
       <div fxFlex="30">
         <mat-card>
           <mat-card-header>
             <mat-card-title>
-            <h2>Facts At a Glance</h2>
+            <h2>Curiosidades</h2>
             </mat-card-title>
           </mat-card-header>
           <mat-card-content>
             <dl>
-              <dt>Started</dt>
-              <dd>3 Feb. 2013</dd>
-              <dt>Major Stake Holder</dt>
-              <dd>HK Fine Foods Inc.</dd>
-              <dt>Last Year's Turnover</dt>
-              <dd>$1,250,375</dd>
-              <dt>Employees</dt>
-              <dd>40</dd>
+              <dt>Altura</dt>
+              <dd>1.95</dd>
+              <dt>Nascimento</dt>
+              <dd>3 Feb. 1998</dd>
+              <dt>Morte</dt>
+              <dd>Imortal</dd>
+              <dt>Quantidade de idiomas falados</dt>
+              <dd>6.912</dd>
+              <dt>QI</dt>
+              <dd>231</dd>
+              <dt>Poderes</dt>
+              <dd>Telequinese e Extrema Beleza</dd>
+              <dt>Seguidores no Insta</dt>
+              <dd>4.236.374.284 (Dados de 2019)</dd>
             </dl>
           </mat-card-content>
         </mat-card>
@@ -43,11 +50,10 @@
   <div fxFlex>
     <mat-card>
       <blockquote>
-        <h3>You better cut the pizza in four pieces because
-            I'm not hungry enough to eat six.</h3>
-        <footer>-- Yogi Berra,
-          <cite>The Wit and Wisdom of Yogi Berra,
-            P. Pepe, Diversion Books, 2014</cite>
+        <h3>Quando o vi pela primeira vez, voltei a andar.</h3>
+        <footer>-- Cleivan,
+          <cite>Relatos contemporâneos,
+            P. Aquatics, Spublica, 2019</cite>
         </footer>
       </blockquote>
     </mat-card>
@@ -55,7 +61,7 @@
 
 
   <div fxFlex>
-    <h2>Corporate Leadership</h2>
+    <h2>Administradores</h2>
     <mat-list *ngIf="leaders">
       <mat-list-item *ngFor="let leader of leaders">
         <img matListAvatar src="{{BaseURL + leader.image}}" alt={{leader.name}}>

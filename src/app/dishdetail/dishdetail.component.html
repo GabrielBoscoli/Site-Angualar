@@ -39,7 +39,8 @@
       <mat-list-item *ngFor="let comment of dish.comments">
         <h4 matLine> {{comment.comment}} </h4>
         <p matLine>
-          <span> {{comment.rating}} Stars </span><br>
+          <!--Esse método aqui é meio miguezento-->
+          <span *ngFor="let i of Arr(comment.rating)" class="fa fa-star fa-yel"></span><br>
           <span> -- {{comment.author}} {{comment.date | date}}</span>
         </p>
       </mat-list-item>
@@ -47,7 +48,8 @@
           <mat-list-item>
             <h4 matLine> {{ cform.value.comment }} </h4>
             <p matLine>
-              <span> {{ cform.value.rating }} Stars </span><br>
+              <!--Esse método aqui é meio miguezento-->
+              <span *ngFor="let i of Arr(cform.value.rating)" class="fa fa-star fa-yel"></span><br>
               <span> -- {{ cform.value.author }}</span>
             </p>
           </mat-list-item>
