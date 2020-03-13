@@ -63,10 +63,10 @@
       </p>
       <table class="form-size">
         <td>
-          <mat-slide-toggle formControlName="agree">May we contact you?</mat-slide-toggle>
+          <mat-slide-toggle formControlName="agree">Podemos te contactar?</mat-slide-toggle>
         </td>
         <td>
-          <mat-select placeholder="How?" formControlName="contacttype">
+          <mat-select placeholder="Como?" formControlName="contacttype">
             <mat-option *ngFor="let ctype of contactType" [value]="ctype">
               {{ ctype }}
             </mat-option>
@@ -87,7 +87,7 @@
 
   <div fxFlex *ngIf="serverProcessing && !errMess">
     <h3>Submitting Form...</h3>
-    <mat-spinner></mat-spinner> <h4>Loading . . . Please Wait</h4>
+    <mat-spinner></mat-spinner> <h4>Carregando . . .</h4>
   </div>
   <div fxFlex *ngIf="errMess">
     <h2>Error</h2>
@@ -95,14 +95,14 @@
   </div>
 
   <div fxFlex *ngIf="showingSubmission">
-    <h3>Your Submission</h3>
-    <p>First Name: {{ feedback.firstname }}</p>
-    <p>Last Name: {{ feedback.lastname }}</p>
-    <p>Tel Number: {{ feedback.telnum }}</p>
+    <h3>Seu Envio</h3>
+    <p>Primeiro Nome: {{ feedback.firstname }}</p>
+    <p>Último Nome: {{ feedback.lastname }}</p>
+    <p>Telefone: {{ feedback.telnum }}</p>
     <p>Email: {{ feedback.email }}</p>
-    <p>Contact You?: {{ feedback.agree }}</p>
-    <p>How?: {{ feedback.contacttype }}</p>
-    <p>Feedback: {{ feedback.message }}</p>
+    <p>Contactar?: {{ feedback.agree }}</p>
+    <p>Como?: {{ feedback.contacttype }}</p>
+    <p>Comentário: {{ feedback.message }}</p>
   </div>
 
 </div>
