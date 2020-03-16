@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run lite",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "lite": "lite-server"
   },
   "private": true,
   "dependencies": {
@@ -45,9 +46,25 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "lite-server": "^2.5.4",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~2.9.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.",
+  "main": "index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielBoscoli/Site-Angular.git"
+  },
+  "author": "Gabriel Boscoli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielBoscoli/Site-Angular/issues"
+  },
+  "homepage": "https://github.com/GabrielBoscoli/Site-Angular#readme"
 }
